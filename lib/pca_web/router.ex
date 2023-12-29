@@ -17,7 +17,7 @@ defmodule PcaWeb.Router do
   scope "/", PcaWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", AsyncLive.Index, :index
   end
 
   # Other scopes may use custom stacks.
